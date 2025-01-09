@@ -1,23 +1,16 @@
-def add_numbers():
-    print("Enter numbers to add. Type 'stop' to finish.")
-    total = 0
-    while True:
-        user_input = input("Enter a number: ")
-        if user_input.lower() == "stop":
-            break
-        try:
-            number = float(user_input)
-            total += number
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-    return total
+# Program to check if a number is even or odd with error handling
 
-
-def main():
-    print("Welcome to the Simple Addition Program!")
-    result = add_numbers()
-    print(f"The total sum of the numbers you entered is: {result}")
-
-
-if _name_ == "_main_":
-    main()
+# Try block to handle invalid input
+try:
+    # Take input from the user
+    number = int(input("Enter a number: "))  # Ensuring the input is a number
+    
+    # Check if the number is even or odd
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+        
+# Catch ValueError if the input is not a valid integer
+except ValueError:
+    print("Invalid input! Please enter a valid integer.")
