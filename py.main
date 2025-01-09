@@ -1,0 +1,23 @@
+def add_numbers():
+    print("Enter numbers to add. Type 'stop' to finish.")
+    total = 0
+    while True:
+        user_input = input("Enter a number: ")
+        if user_input.lower() == "stop":
+            break
+        try:
+            number = float(user_input)
+            total += number
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    return total
+
+
+def main():
+    print("Welcome to the Simple Addition Program!")
+    result = add_numbers()
+    print(f"The total sum of the numbers you entered is: {result}")
+
+
+if _name_ == "_main_":
+    main()
