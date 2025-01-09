@@ -1,0 +1,18 @@
+# Program to calculate the factorial of a number
+
+# Input from the user
+num = int(input("Enter a number: "))
+
+# Initialize the factorial result
+factorial = 1
+
+# Check if the number is negative
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    # Calculate factorial using a loop
+    for i in range(1, num + 1):
+        factorial *= i
+    
+    # Output the result
+    print(f"The factorial of {num} is {factorial}.")
