@@ -1,15 +1,13 @@
-
 """
-This script calculates the factorial of a number.
+This script calculates and prints the multiplication table for a number.
 """
 
-def factorial(n):
+def multiplication_table(n):
     """
-    Returns the factorial of a non-negative integer n.
+    Prints the multiplication table for a non-negative integer n.
     """
-    if n in (0, 1):
-        return 1
-    return n * factorial(n - 1)
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n * i}")
 
 num = int(input("Enter a number: "))
-print(f"The factorial of {num} is {factorial(num)}")
+multiplication_table(num)
